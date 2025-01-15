@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!-- Dropdown Example -->
+    <h3>Select Using Dropdown</h3>
+    <label for="cars">Choose a car:</label>
+    <select name="cars" id="carsDropdown">
+      <option value="GM">GM Cars</option>
+      <option value="Ford">Ford Cars</option>
+      <option value="Honda">Honda Cars</option>
+      <option value="BMW">BMW Cars</option>
+    </select>
+    <!-- this is a comment -->
+    <button onclick="getDropdownValue()">Print Dropdown value</button>
+
+    <!-- Radio Button Example
+    -->
+    <div style="margin-top: 200px">
+      <h3>Select Using Radio Buttons</h3>
+      <h3>Select Using Radio Buttons</h3>
+      <h3>Select Using Radio Buttons</h3>
+      <label for="cars">Choose a car:</label>
+
+      <div>
+        <input type="radio" id="gm" name="cars" value="GM" checked />
+        <label for="gm">GM</label>
+      </div>
+
+      <div>
+        <input type="radio" id="ford" name="cars" value="Ford" />
+        <label for="ford">Ford</label>
+      </div>
+
+      <div>
+        <input type="radio" id="honda" name="cars" value="Honda" />
+        <label for="honda">Honda</label>
+      </div>
+
+      <button onclick="getRadioButtonValue()">Print Radio Button value</button>
+    </div>
+
+    <script>
+      // dropdown value
+      function getDropdownValue() {
+        const dropdownValue = document.getElementById('carsDropdown').value;
+
+        alert('you picked: ' + dropdownValue);
+      }
+
+      //radio button value
+      function getRadioButtonValue() {
+        const radioButtonValue = document.querySelector(
+          'input[name="cars"]:checked'
+        ).value;
+
+        alert('you picked: ' + radioButtonValue);
+
+        return radioButtonValue;
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+Extension: 
+- Add images
+- Improve the styling, play with CSS
+- Add the ability to select the die from a dropdown
+- Add ability to select die from a radio button
+- Review the code/lectures: come up with 1 question and/or 1 min explanation
+- Complete any previous work we assigned, any non-assigned ones you'd like
+-->
